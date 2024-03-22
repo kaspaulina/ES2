@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
             GrauSeeder::class,
             MunicipioSeeder::class,
             PartidoSeeder::class,
+            RacaSeeder::class,
+            SecaoSeeder::class,
+            VotacaoSeeder::class,
 
         ));
         // \App\Models\User::factory(10)->create();
