@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', function () { return view('homepage'); });
+Route::get('/home', function () { return view('homepage'); });
+
+Route::get('/candidatos', function () { return view('candidatos'); })->name('candidatos');
+Route::get('/insights', function () { return view('insights'); })->name('insights');
+Route::get('/municipios', function () { return view('municipios'); })->name('municipios');
+Route::get('/partidos', function () { return view('partidos'); })->name('partidos');
+Route::get('/saibamais', function () { return view('saibamais'); })->name('saibamais');
+Route::get('/pesquisasimples', function () { return view('pesquisasimples'); })->name('pesquisasimples');

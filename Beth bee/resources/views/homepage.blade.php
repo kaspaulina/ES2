@@ -15,20 +15,31 @@
 <body>
     <div class="flex items-center justify-evenly" style="height: 96vh;">
         <div style="max-width: 40vw;">
-            <h1 class="font-black text-9xl">BETH<br><span class="text-xl italic">(boletim eleitoral transparente
-                    hoje)</span><br>BEE</h1>
+            <div class="flex items-center">
+                <h1 class="font-black text-9xl">BETH<br><span class="text-xl italic">(boletim eleitoral transparente
+                        hoje)</span><br>BEE</h1>
+                <img style="height: 191px; width: 191px; margin-left: 3rem" src="{{asset('images/beth-bee-logo.png')}}" alt="Beth Bee logo">
+            </div>
             <h4 class="text-lg">O BETH BEE é um portal que apresenta de forma simples e didática, informações e insights
                 sobre os
                 resultados da última eleição presidencial, com base nos dados do estado de Sergipe.</h4>
             <div class="mt-16">
-                <button type="button"
-                    class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Pesquisa Simples</button>
-                <button type="button"
+                <a href="{{route('pesquisasimples')}}">
+                    <button type="button"
+                        class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Pesquisa Simples</button>
+                </a>
+                <a href="{{route('candidatos')}}">
+                    <button type="button"
                     class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Informações</button>
-                <button type="button"
+                </a>
+                <a href="{{route('insights')}}">
+                    <button type="button"
                     class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Insights</button>
-                <button type="button"
-                    class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Saiba Mais</button>
+                </a>
+                <a href="{{route('saibamais')}}">
+                    <button type="button"
+                        class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Saiba Mais</button>
+                </a>
             </div>
         </div>
         <div>
