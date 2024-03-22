@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSecaoTable extends Migration
+class CreateSecaosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,8 @@ class CreateSecaoTable extends Migration
     {
         Schema::create('secaos', function (Blueprint $table) {
             $table->integer("id_secao")->primary();
-            $table->string('nm_local_votacao');
             $table->integer('nr_local_votacao');
+            $table->string('nm_local_votacao');
             $table->timestamps();
         });
     }

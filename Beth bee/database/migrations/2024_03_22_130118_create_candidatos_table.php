@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCandidatoTable extends Migration
+class CreateCandidatosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,6 +18,7 @@ class CreateCandidatoTable extends Migration
             $table->integer('nr_candidato');
             $table->string('nm_candidato');
             $table->boolean('eleito');
+            $table->integer('nr_idade_data_posse');
             $table->foreignId('nr_partido')->constrained('partidos');
             $table->foreignId('cd_cargo')->constrained('cargos');
             $table->foreignId('cd_genero')->constrained('generos');
