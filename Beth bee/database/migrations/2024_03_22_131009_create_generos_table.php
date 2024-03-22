@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCandidatoTable extends Migration
+class CreateGeneroTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateCandidatoTable extends Migration
      */
     public function up()
     {
-        Schema::create('candidato', function (Blueprint $table) {
-            $table->id();
+        Schema::create('generos', function (Blueprint $table) {
+            $table->integer("cd_genero")->primary();
+            $table->string('ds_genero');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateCandidatoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('candidato');
+        Schema::dropIfExists('genero');
     }
 }
