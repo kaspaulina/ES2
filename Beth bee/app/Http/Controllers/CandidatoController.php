@@ -14,7 +14,7 @@ class CandidatoController extends Controller
      */
     public function index()
     {
-        $candidatos = Candidato::all();
+        $candidatos = Candidato::take(50)->get();
         return view('candidatos', compact('candidatos'));
     }
 
