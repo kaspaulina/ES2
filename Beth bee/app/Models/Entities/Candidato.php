@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Candidato extends Model
 {
     use HasFactory;
-    protected $table = 'votacaos';
+    protected $table = 'votacao';
 
     protected $hidden = [
         'created_at',
@@ -132,7 +132,7 @@ class Candidato extends Model
      * Get the Partido that owns the candidato.
      *
      * @return Partido
-     */ 
+     */
     public function partidoRelationship(){
         return $this->belongsTo(Partido::class, 'nr_partido');
     }
