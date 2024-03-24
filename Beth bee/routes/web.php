@@ -21,4 +21,4 @@ Route::get('/insights', function () { return view('insights'); })->name('insight
 Route::get('/municipios', function () { return view('municipios'); })->name('municipios');
 Route::get('/partidos', function () { return view('partidos'); })->name('partidos');
 Route::get('/saibamais', function () { return view('saibamais'); })->name('saibamais');
-Route::get('/pesquisasimples', function () { return view('pesquisasimples'); })->name('pesquisasimples');
+Route::get('/informacoes', function () { return view('informacoes'); })->name('informacoes');

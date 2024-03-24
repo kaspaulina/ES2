@@ -389,12 +389,7 @@ return [
         // ],
         [
             'text' => 'Pesquisa Simples',
-            'url' => 'pesquisasimples',
             'icon' => 'fas fa-fw fa-search',
-        ],
-        [
-            'text' => 'Informações',
-            'icon' => 'fas fa-fw fa-info',
             'submenu' => [
                 [
                     'text' => 'Candidatos',
@@ -409,6 +404,11 @@ return [
                     'url' => 'municipios',
                 ],
             ],
+        ],
+        [
+            'text' => 'Informações',
+            'url' => 'informacoes',
+            'icon' => 'fas fa-fw fa-info',
         ],
         [
             'text' => 'Insights',

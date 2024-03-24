@@ -3,11 +3,11 @@
 @section('title', 'Pesquisa Simples')
 
 @section('content_header')
-    <h1>Pesquisa Simples</h1>
+    <h1>Informações</h1>
 @stop
 
 @section('content')
-    <p>Use os filtros abaixo para refinar a sua pesquisa!</p>
+    <p>Informações!</p>
 @stop
 
 @section('css')
