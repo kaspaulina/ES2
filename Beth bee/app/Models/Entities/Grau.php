@@ -13,7 +13,7 @@ class Grau extends Model
      *
      * @var string
      */
-    protected $table = 'graus';
+    protected $table = 'grau';
 
     /**
      * The attributes that aren't mass assignable.

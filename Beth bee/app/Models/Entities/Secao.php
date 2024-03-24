@@ -13,7 +13,7 @@ class Secao extends Model
      *
      * @var string
      */
-    protected $table = 'secaos';
+    protected $table = 'secao';
 
     /**
      * The attributes that aren't mass assignable.

@@ -13,7 +13,7 @@ class Raca extends Model
      *
      * @var string
      */
-    protected $table = 'racas';
+    protected $table = 'raca';
 
     /**
      * The attributes that aren't mass assignable.

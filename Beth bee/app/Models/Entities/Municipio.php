@@ -14,7 +14,7 @@ class Municipio extends Model
     *
     * @var string
     */
-   protected $table = 'municipios';
+   protected $table = 'municipio';
 
    /**
     * The attributes that aren't mass assignable.

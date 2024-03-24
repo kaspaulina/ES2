@@ -13,7 +13,7 @@ class Genero extends Model
      *
      * @var string
      */
-    protected $table = 'generos';
+    protected $table = 'genero';
 
     /**
      * The attributes that aren't mass assignable.

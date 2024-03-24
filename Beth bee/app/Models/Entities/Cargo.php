@@ -13,7 +13,7 @@ class Cargo extends Model
      *
      * @var string
      */
-    protected $table = 'cargos';
+    protected $table = 'cargo';
 
     /**
      * The attributes that aren't mass assignable.

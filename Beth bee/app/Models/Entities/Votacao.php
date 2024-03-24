@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Votacao extends Model
 {
     use HasFactory;
-    protected $table = 'votacaos';
+    protected $table = 'votacao';
 
     protected $hidden = [
         'created_at',
