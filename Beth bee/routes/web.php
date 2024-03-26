@@ -16,7 +16,11 @@ use App\Http\Controllers\MunicipioController;
 |
 */
 
-Route::get('/', function () { return view('homepage'); });
+Route::get('/', function ($a) {
+
+    print('Hello' . $a);
+    return view('homepage');
+});
 Route::get('/home', function () { return view('homepage'); });
 
 Route::get('/candidatos', [CandidatoController::class, 'index'])->name('candidatos');

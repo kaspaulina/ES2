@@ -49,7 +49,7 @@
     </div>
 </body>
 <footer class="min-h-[4%] bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center w-full">
-    <span class="text-md text-black">© 2023&nbsp;<a href="https://rodrigoos.me/" class="hover:underline">Beth Bee</a>. All Rights Reserved.</span>
+    <span class="text-md text-black">© 2024&nbsp;<a href="https://rodrigoos.me/" class="hover:underline">Beth Bee</a>. All Rights Reserved.</span>
 </footer>
 
 </html>
