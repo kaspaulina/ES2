@@ -21,11 +21,12 @@ Repositório para a matéria Engenharia de Software II
 
 
 #### PHP
-- ``php --ini`` find where is your php.ini, uncomment the line containing ``extension=pdo_mysql``;
+- ``php --ini`` find where is your ``php.ini``, uncomment the line containing ``extension=pdo_mysql``, to enable object mapping driver;
 - ``.env`` <- ``.env.example``
 
 #### Database | MariaDB (MySQL)
-- install and login on the data base ``mariadb``, see: https://wiki.archlinux.org/title/MariaDB
+
+- install and login on the database ``mariadb``, see: https://wiki.archlinux.org/title/MariaDB
 - ``GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'your_password' WITH GRANT OPTION``;
 - ``CREATE DATABASE laravel;`` must be the same name in your ``DB_DATABASE`` inside``.env``
 - ``USE laravel;``
