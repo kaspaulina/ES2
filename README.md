@@ -28,7 +28,7 @@ Repositório para a matéria Engenharia de Software II
 - install and login on the data base ``mariadb``, see: https://wiki.archlinux.org/title/MariaDB
 - ``GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'your_password' WITH GRANT OPTION``;
 - ``CREATE DATABASE laravel;`` must be the same name in your ``DB_DATABASE`` inside``.env``
-- ``USE your_database_name;``
+- ``USE laravel;``
 - ``SOURCE /path/to/your/schema.sql;``
 
 
