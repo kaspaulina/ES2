@@ -12,10 +12,10 @@ class CandidatoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $candidatos = Candidato::all();
-        return view('candidatos', compact('candidatos'));
+        return view('candidatos');
     }
 
     /**
