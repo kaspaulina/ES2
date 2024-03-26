@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">{{$municipio->nm_mun}}</h5>
                     <p class="card-text">Código: {{$municipio->cd_mun}}</p>
-                    <a href="#" class="btn btn-primary">Ver Mais</a>
+                    <a href="#" class="btn btn-warning">Ver Mais</a>
                 </div>
             </div>
         @endforeach

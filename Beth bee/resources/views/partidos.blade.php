@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">{{$partido->nm_partido}}</h5>
                     <p class="card-text">Número: {{$partido->nr_partido}}</p>
-                    <a href="#" class="btn btn-primary">Ver Mais</a>
+                    <a href="#" class="btn btn-warning">Ver Mais</a>
                 </div>
             </div>
         @endforeach
