@@ -48,8 +48,8 @@ class PartidoSeeder extends Seeder
     foreach($partidos as $partido){
         DB::table('partidos')->insert([
             'nr_partido' => $partido[0],
-            'sg_partido'=>  $partido[0],
-            'nm_partido'=>  $partido[0],
+            'sg_partido'=>  $partido[1],
+            'nm_partido'=>  $partido[2],
         ]);
     }
     }

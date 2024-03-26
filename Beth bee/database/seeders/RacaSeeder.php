@@ -25,7 +25,7 @@ class RacaSeeder extends Seeder
         foreach($racas as $raca){
             DB::table('racas')->insert([
                 'cd_cor_raca' => $raca[0],
-                'ds_cor_raca'=>  $raca[0],
+                'ds_cor_raca'=>  $raca[1],
             ]);
         }
     }

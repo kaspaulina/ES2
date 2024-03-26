@@ -21,7 +21,7 @@ class GeneroSeeder extends Seeder
         foreach($generos as $genero){
             DB::table('generos')->insert([
                 'cd_genero' => $genero[0],
-                'ds_genero'=>  $genero[0],
+                'ds_genero'=>  $genero[1],
             ]);
         }
 

@@ -28,7 +28,7 @@ class GrauSeeder extends Seeder
         foreach($graus as $grau){
             DB::table('graus')->insert([
                 'cd_grau' => $grau[0],
-                'ds_grau'=>  $grau[0],
+                'ds_grau'=>  $grau[1],
             ]);
         }
     }

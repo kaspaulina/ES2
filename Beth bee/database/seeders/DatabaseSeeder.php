@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             PartidoSeeder::class,
             RacaSeeder::class,
             SecaoSeeder::class,
-            VotacaoSeeder::class,
+            // VotacaoSeeder::class,
 
         ));
         // \App\Models\User::factory(10)->create();

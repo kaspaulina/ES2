@@ -29,7 +29,7 @@ class CargoSeeder extends Seeder
     foreach($cargos as $cargo){
         DB::table('cargos')->insert([
             'cd_cargo' => $cargo[0],
-            'ds_cargo'=>  $cargo[0],
+            'ds_cargo'=>  $cargo[1],
         ]);
     }
     }

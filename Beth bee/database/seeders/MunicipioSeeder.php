@@ -95,7 +95,7 @@ class MunicipioSeeder extends Seeder
         foreach($municipios as $municipio){
             DB::table('municipios')->insert([
                 'cd_mun' => $municipio[0],
-                'ds_mun'=>  $municipio[0],
+                'ds_mun'=>  $municipio[1],
             ]);
         }
     }

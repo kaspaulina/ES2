@@ -1213,9 +1213,9 @@ class SecaoSeeder extends Seeder
 
         foreach($secaos as $secao){
             DB::table('secaos')->insert([
-                'id_secao' => $secao[0],
-                'nr_local_votacao'=>  $secao[0],
-                'nm_local_votacao'=>  $secao[0],
+                'cd_secao' => $secao[0],
+                'nr_local_votacao'=>  $secao[1],
+                'nm_local_votacao'=>  $secao[2],
             ]);
         }
     }
