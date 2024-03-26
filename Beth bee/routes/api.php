@@ -17,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+use App\Models\Entities\Candidato;
+
+Route::get('/', function () {
+
+    $candidates = Candidato::all();
+    $users = [
+        ['id' => 1, 'name' => 'John Doe'],
+        ['id' => 2, 'name' => 'Jane Smith'],
+    ];
+    // $res = $users;
+    $res = $candidates;
+    return response()->json($res);
+});
