@@ -14,7 +14,8 @@ class CreateGrausTable extends Migration
     public function up()
     {
         Schema::create('graus', function (Blueprint $table) {
-            $table->integer("cd_grau")->primary();
+            $table->id();
+            $table->integer("cd_grau");
             $table->string('ds_grau');
             $table->timestamps();
         });

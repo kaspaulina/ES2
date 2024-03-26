@@ -14,7 +14,8 @@ class CreateVotacaosTable extends Migration
     public function up()
     {
         Schema::create('votacaos', function (Blueprint $table) {
-            $table->integer("id_votacao")->primary();
+            $table->id();
+            $table->integer("cd_votacao")->unique();
             $table->integer('qt_votos');
             $table->integer('nr_turno');
             $table->foreignId('cd_mun')->constrained('municipios');

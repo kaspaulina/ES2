@@ -31,19 +31,19 @@ class Votacao extends Model
       public function setCandidatoAttribute($value)
       {
         if(isset($value)){
-            $this->atributes['id_candidato'] = Candidato::where('id_candidato',$value)->first()->id_candidato;
+            $this->atributes['candidato_id'] = Candidato::where('id',$value)->first()->id;
         }
       }
       public function setSecaoAttribute($value)
       {
         if(isset($value)){
-            $this->atributes['id_secao'] = Secao::where('id_secao',$value)->first()->id_candidato;
+            $this->atributes['secao_id'] = Secao::where('id',$value)->first()->id;
         }
       }
       public function setMunicipioAttribute($value)
       {
         if(isset($value)){
-            $this->atributes['cd_mun'] = Municipio::where('cd_mun',$value)->first()->cd_mun;
+            $this->atributes['mun_id'] = Municipio::where('id',$value)->first()->id;
         }
       }
 
@@ -54,7 +54,7 @@ class Votacao extends Model
          */
         public function municipioRelationship()
         {
-        return $this->belongsTo(Municipio::class,'cd_mun');
+        return $this->belongsTo(Municipio::class,'mun_id');
         }
         /**
              * get the Secao pertece a votacao
@@ -62,7 +62,7 @@ class Votacao extends Model
              */
         public function secaoRelationship()
         {
-        return $this->belongsTo(Secao::class,'id_secao');
+        return $this->belongsTo(Secao::class,'secao_id');
         }
 
         /**
@@ -71,6 +71,6 @@ class Votacao extends Model
              */
         public function candidatoRelationship()
         {
-        return $this->belongsTo(Candidato::class,'id_candidato');
+        return $this->belongsTo(Candidato::class,'candidato_id');
         }
 }

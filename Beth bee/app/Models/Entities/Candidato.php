@@ -42,37 +42,37 @@ class Candidato extends Model
       public function setVotacaoAttribute($value)
       {
         if(isset($value)){
-            $this->atributes['id_votacao'] = Candidato::where('id_votacao',$value)->first()->id_votacao;
+            $this->atributes['votacao_id'] = Candidato::where('id',$value)->first()->id;
         }
       }
       public function setRacaAttribute($value)
       {
         if(isset($value)){
-            $this->atributes['cd_cor_raca'] = Secao::where('cd_cor_raca',$value)->first()->cd_cor_raca;
+            $this->atributes['raca_id'] = Secao::where('id',$value)->first()->id;
         }
       }
       public function setGrauAttribute($value)
       {
         if(isset($value)){
-            $this->atributes['cd_grau'] = Grau::where('cd_grau',$value)->first()->cd_grau;
+            $this->atributes['grau_id'] = Grau::where('id',$value)->first()->id;
         }
       }
         public function setGeneroAttribute($value)
         {
             if(isset($value)){
-                $this->atributes['cd_genero'] = Genero::where('cd_genero',$value)->first()->cd_genero;
+                $this->atributes['genero_id'] = Genero::where('id',$value)->first()->id;
             }
         }
         public function setCargoAttribute($value)
         {
             if(isset($value)){
-                $this->atributes['cd_cargo'] = Cargo::where('cd_cargo',$value)->first()->cd_cargo;
+                $this->atributes['cargo_id'] = Cargo::where('id',$value)->first()->id;
             }
         }
         public function setPartidoAttribute($value)
         {
             if(isset($value)){
-                $this->atributes['nr_partido'] = Partido::where('nr_partido',$value)->first()->nr_partido;
+                $this->atributes['nr_partido_id'] = Partido::where('id',$value)->first()->id;
             }
         }
 
@@ -83,7 +83,7 @@ class Candidato extends Model
          */
         public function votacaoRelationship()
         {
-        return $this->hasMany(Votacao::class,'id_votacao');
+        return $this->hasMany(Votacao::class,'votacao_id');
         }
          /**
      * Get the Raca that owns the candidato.
@@ -93,7 +93,7 @@ class Candidato extends Model
 
     public function racaRelationship()
     {
-        return $this->belongsTo(Raca::class, 'cd_cor_raca');
+        return $this->belongsTo(Raca::class, 'raca_id');
     }
 
       /**
@@ -104,7 +104,7 @@ class Candidato extends Model
 
      public function grauRelationship()
      {
-         return $this->belongsTo(Grau::class, 'cd_cor_raca');
+         return $this->belongsTo(Grau::class, 'grau_id');
      }
 
     /**
@@ -115,7 +115,7 @@ class Candidato extends Model
 
     public function generoRelationship()
     {
-        return $this->belongsTo(Genero::class, 'cd_genero');
+        return $this->belongsTo(Genero::class, 'genero_id');
     }
 
     /**
@@ -125,16 +125,16 @@ class Candidato extends Model
      */
 
     public function cargoRelationship(){
-        return $this->belongsTo(Cargo::class, 'cd_cargo');
+        return $this->belongsTo(Cargo::class, 'cargo_id');
     }
 
     /**
      * Get the Partido that owns the candidato.
      *
      * @return Partido
-     */ 
+     */
     public function partidoRelationship(){
-        return $this->belongsTo(Partido::class, 'nr_partido');
+        return $this->belongsTo(Partido::class, 'nr_partido_id');
     }
 
 }

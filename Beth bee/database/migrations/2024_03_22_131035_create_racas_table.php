@@ -14,7 +14,8 @@ class CreateRacasTable extends Migration
     public function up()
     {
         Schema::create('racas', function (Blueprint $table) {
-            $table->integer("cd_cor_raca")->primary();
+            $table->id();
+            $table->integer("cd_cor_raca");
             $table->string('ds_cor_raca');
             $table->timestamps();
         });

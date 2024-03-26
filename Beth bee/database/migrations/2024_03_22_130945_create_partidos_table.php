@@ -14,7 +14,8 @@ class CreatePartidosTable extends Migration
     public function up()
     {
         Schema::create('partidos', function (Blueprint $table) {
-            $table->integer("nr_partido")->primary();
+            $table->id();
+            $table->integer("nr_partido")->unique();
             $table->string('sg_partido');
             $table->string('nm_partido');
             $table->timestamps();

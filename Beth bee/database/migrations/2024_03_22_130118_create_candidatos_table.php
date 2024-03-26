@@ -14,8 +14,9 @@ class CreateCandidatosTable extends Migration
     public function up()
     {
         Schema::create('candidatos', function (Blueprint $table) {
-            $table->integer("id_candidato")->primary();
-            $table->integer('nr_candidato');
+            $table->id();
+            $table->integer("cd_candidato")->unique();
+            $table->integer('nr_candidato')->unique();
             $table->string('nm_candidato');
             $table->boolean('eleito');
             $table->integer('nr_idade_data_posse');

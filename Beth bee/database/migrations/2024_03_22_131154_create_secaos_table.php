@@ -14,7 +14,8 @@ class CreateSecaosTable extends Migration
     public function up()
     {
         Schema::create('secaos', function (Blueprint $table) {
-            $table->integer("id_secao")->primary();
+            $table->id();
+            $table->integer("cd_secao")->unique();
             $table->integer('nr_local_votacao');
             $table->string('nm_local_votacao');
             $table->timestamps();
