@@ -17,12 +17,14 @@ Repositório para a matéria Engenharia de Software II
 
     cd "./Beth bee/" && composer install && npm install
 
+    php artisan serve
+
 
 #### PHP
 - ``php --ini`` find where is your php.ini, uncomment the line containing ``extension=pdo_mysql``;
-- ``.env`` 
+- ``.env`` <- ``.env.example``
 
-#### MariaDB (MySQL)
+#### Database | MariaDB (MySQL)
 - install and login on the data base ``mariadb``, see: https://wiki.archlinux.org/title/MariaDB
 - ``GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'your_password' WITH GRANT OPTION``;
 - ``CREATE DATABASE laravel;`` must be the same name in your ``DB_DATABASE`` inside``.env``
@@ -34,4 +36,4 @@ Repositório para a matéria Engenharia de Software II
 
 - ``php artisan list``
 - ``php artisan serve``, start server ``--port=6969`` (optional).
-
+- ``php artisan serve``
