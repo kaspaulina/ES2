@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -13,6 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(array(
+            CandidatoSeeder::class,
+            CargoSeeder::class,
+            GeneroSeeder::class,
+            GrauSeeder::class,
+            MunicipioSeeder::class,
+            PartidoSeeder::class,
+            RacaSeeder::class,
+            SecaoSeeder::class,
+            VotacaoSeeder::class,
+
+        ));
         // \App\Models\User::factory(10)->create();
     }
 }

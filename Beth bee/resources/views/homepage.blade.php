@@ -24,13 +24,13 @@
                 sobre os
                 resultados da última eleição presidencial, com base nos dados do estado de Sergipe.</h4>
             <div class="mt-16">
-                <a href="{{route('pesquisasimples')}}">
-                    <button type="button"
-                        class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Pesquisa Simples</button>
-                </a>
                 <a href="{{route('candidatos')}}">
                     <button type="button"
-                    class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Informações</button>
+                    class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Pesquisa Simples</button>
+                </a>
+                <a href="{{route('informacoes')}}">
+                    <button type="button"
+                        class="text-yellow-300 bg-gradient-to-r from-zinc-500 via-zinc-600 to-zinc-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-zinc-300  font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2">Informações</button>
                 </a>
                 <a href="{{route('insights')}}">
                     <button type="button"
@@ -49,7 +49,7 @@
     </div>
 </body>
 <footer class="min-h-[4%] bg-gradient-to-br from-yellow-300 to-yellow-500 flex items-center justify-center w-full">
-    <span class="text-md text-black">© 2023&nbsp;<a href="https://rodrigoos.me/" class="hover:underline">Beth Bee</a>. All Rights Reserved.</span>
+    <span class="text-md text-black">© 2024&nbsp;<a href="https://rodrigoos.me/" class="hover:underline">Beth Bee</a>. All Rights Reserved.</span>
 </footer>
 
 </html>

@@ -154,8 +154,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -196,7 +196,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-warning sidebar-light-warning elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -389,12 +389,7 @@ return [
         // ],
         [
             'text' => 'Pesquisa Simples',
-            'url' => 'pesquisasimples',
             'icon' => 'fas fa-fw fa-search',
-        ],
-        [
-            'text' => 'Informações',
-            'icon' => 'fas fa-fw fa-info',
             'submenu' => [
                 [
                     'text' => 'Candidatos',
@@ -409,6 +404,11 @@ return [
                     'url' => 'municipios',
                 ],
             ],
+        ],
+        [
+            'text' => 'Informações',
+            'url' => 'informacoes',
+            'icon' => 'fas fa-fw fa-info',
         ],
         [
             'text' => 'Insights',
