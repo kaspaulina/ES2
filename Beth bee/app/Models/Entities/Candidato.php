@@ -104,7 +104,7 @@ class Candidato extends Model
 
      public function grauRelationship()
      {
-         return $this->belongsTo(Grau::class, 'cd_cor_raca');
+         return $this->belongsTo(Grau::class, 'cd_grau');
      }
 
     /**
