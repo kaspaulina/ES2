@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CandidatoController;
+use App\Http\Controllers\PartidoController;
+use App\Http\Controllers\MunicipioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +16,15 @@ use App\Http\Controllers\CandidatoController;
 |
 */
 
-Route::get('/', function ($a) {
-
-    print('Hello' . $a);
+Route::get('/', function () {
     return view('homepage');
 });
+
 Route::get('/home', function () { return view('homepage'); });
 
 Route::get('/candidatos', [CandidatoController::class, 'index'])->name('candidatos');
+Route::get('/municipios', [MunicipioController::class, 'index'])->name('municipios');
+Route::get('/partidos', [PartidoController::class, 'index'])->name('partidos');
 Route::get('/insights', function () { return view('insights'); })->name('insights');
-Route::get('/municipios', function () { return view('municipios'); })->name('municipios');
-Route::get('/partidos', function () { return view('partidos'); })->name('partidos');
 Route::get('/saibamais', function () { return view('saibamais'); })->name('saibamais');
 Route::get('/informacoes', function () { return view('informacoes'); })->name('informacoes');
