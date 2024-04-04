@@ -43,7 +43,7 @@ Route::get('/votos/{idMunicipio}/pdf', function ($idMunicipio) {
     $municipio = Municipio::where('cd_mun', $idMunicipio)->first();
     // $municipio = $votos->first()->getMunicipioAttribute();
 
-    generateVotesPdfFromJson($votos, $municipio);
+    $result = generateVotesPdfFromJson($votos, $municipio);
 
     return response()->json(['message' => 'PDF gerado com sucesso'], 200);
 });
@@ -68,9 +68,7 @@ Route::get('/candidatos/{municipioId}', function ($municipioId) {
 use Dompdf\Dompdf;
 Route::get('/candidatos/pdf', function () {
     $candidates = Candidato::all();
-
     generateCandidatePdfFromJson($candidates);
-
     return response()->json(['message' => 'PDF gerado com sucesso'], 200);
 });
 
