@@ -10,7 +10,7 @@
     <p>Busca por Candidato</p>
 
     <script>
-        var apiUrl = 'http://127.0.0.1:3333/api/candidatos';
+        var apiUrl = 'http://127.0.0.1:8000/api/candidatos';
         var candidatos;
 
         fetch(apiUrl)
