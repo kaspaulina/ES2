@@ -52,17 +52,6 @@ Route::get('/municipios', function () {
     return response()->json($res);
 });
 
-Route::get('/candidatos/{municipioId}', function ($municipioId) {
-    // Find the Municipio with the given ID
-    $municipio = Municipio::findOrFail($municipioId);
-
-    // Retrieve the candidates associated with the Municipio
-    $candidatos = $municipio->candidatos();
-
-    // Return the candidates as JSON response
-    return response()->json($candidatos);
-});
-
 
 use Dompdf\Dompdf;
 Route::get('/candidatos/pdf', function () {

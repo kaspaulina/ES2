@@ -8,6 +8,8 @@
 
 @section('content')
     <p>Receba Insights da equipe BETH BEE!</p>
+
+   <a href="./api/candidatos/pdf" class="btn btn-warning">Ver Relatório</a>
 @stop
 
 @section('css')
