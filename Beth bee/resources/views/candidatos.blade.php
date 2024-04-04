@@ -8,19 +8,38 @@
 
 @section('content')
     <p>Busca por Candidato</p>
+
+    <script>
+        var apiUrl = 'http://127.0.0.1:3333/api/candidatos';
+        var candidatos;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                candidatos = data;
+                console.log(candidatos);
+
+                var container = document.querySelector('.d-flex.flex-wrap.justify-content-around');
+                candidatos.forEach(candidato => {
+                    var card = `
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">${candidato.nm_candidato}</h5>
+                                <p class="card-text">Número: ${candidato.nr_candidato}</p>
+                                <a href="#" class="btn btn-warning">Ver Mais</a>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+
     <div class="d-flex flex-wrap justify-content-around">
-        @foreach($candidatos as $candidato)
-            <div class="card" style="width: 18rem;">
-                <img src="{{asset('images/candidato-placeholder.avif')}}" class="card-img-top" alt="Foto do Candidato">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">{{$candidato->nm_candidato}}</h5>
-                    <p class="card-text">Número: {{$candidato->nr_candidato}}</p>
-                    {{-- <p class="card-text">Partido: {{$candidato->nr_partido}}</p> --}}
-                    {{-- <p class="card-text">Cargo: {{$candidato->cargoRelationship}}</p> --}}
-                    <a href="#" class="btn btn-primary">Ver Mais</a>
-                </div>
-            </div>
-        @endforeach
+        <!-- Os cards serão inseridos aqui pelo JavaScript -->
     </div>
 @stop
 

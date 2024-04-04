@@ -14,6 +14,7 @@ class Grau extends Model
      * @var string
      */
     protected $table = 'grau';
+    protected $primaryKey = 'cd_grau';
 
     /**
      * The attributes that aren't mass assignable.

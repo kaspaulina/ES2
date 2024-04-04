@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Entities\Candidato;
+use App\Models\Entities\Partido;
 
-class CandidatoController extends Controller
+class PartidoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        return view('candidatos');
+        $partidos = Partido::all();
+        return view('partidos', compact('partidos'));
     }
 
     /**
