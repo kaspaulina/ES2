@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CandidatoController;
 use App\Http\Controllers\PartidoController;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\InformacaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/home', function () { return view('homepage'); });
 Route::get('/candidatos', [CandidatoController::class, 'index'])->name('candidatos');
 Route::get('/municipios', [MunicipioController::class, 'index'])->name('municipios');
 Route::get('/partidos', [PartidoController::class, 'index'])->name('partidos');
+Route::get('/informacoes', [InformacaoController::class, 'escolaridade'])->name('informacoes');
 Route::get('/insights', function () { return view('insights'); })->name('insights');
 Route::get('/saibamais', function () { return view('saibamais'); })->name('saibamais');
-Route::get('/informacoes', function () { return view('informacoes'); })->name('informacoes');
+
